@@ -1,14 +1,14 @@
 <html>
   <body>
-    <button id="myButton" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">Click me!</button>
+    <button id="myButton" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200%; height: 200%">Click me!</button>
     <script>
       var myButton = document.getElementById("myButton");
       var words = ["apple", "banana", "orange", "grape", "strawberry"];
       var colors = ["red", "green", "blue", "purple", "pink"];
 
       myButton.addEventListener("click", function() {
-        var randomWord = words[Math.floor(Math.random() * words.length)];
         var randomColor = colors[Math.floor(Math.random() * colors.length)];
+        var randomWord = words[Math.floor(Math.random() * words.length)];
         alert(randomWord);
         document.body.style.backgroundColor = randomColor;
       });
