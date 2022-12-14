@@ -1,22 +1,17 @@
 <html>
-  <head>
-    <style>
-      button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(2);
-        transition: transform 0.3s;
-      }
-      button:hover {
-        transform: scale(0.5);
-      }
-      button:active {
-        transition: none;
-      }
-    </style>
-  </head>
   <body>
-    <button>Click me!</button>
+    <button id="myButton" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">Click me!</button>
+    <script>
+      var myButton = document.getElementById("myButton");
+      var words = ["apple", "banana", "orange", "grape", "strawberry"];
+      var colors = ["red", "green", "blue", "purple", "pink"];
+
+      myButton.addEventListener("click", function() {
+        var randomWord = words[Math.floor(Math.random() * words.length)];
+        var randomColor = colors[Math.floor(Math.random() * colors.length)];
+        alert(randomWord);
+        document.body.style.backgroundColor = randomColor;
+      });
+    </script>
   </body>
 </html>
